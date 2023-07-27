@@ -1,7 +1,7 @@
 /*
 created by: Toby Cantello
 Date created: 7/11/23
-Last updated: 7/12/23
+Last updated: 7/17/23
 */
 
 * { 
@@ -11,7 +11,7 @@ Last updated: 7/12/23
 }
 
 body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/background/americanflag.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../images/background/americanflag.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -76,4 +76,65 @@ footer {
     font-weight: bolder;
     text-align: center;
     align-content: center;
+}
+
+.playParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.playTitle {
+    color:white;
+    font-size: 72px;
+    font-weight: bolder;
+    font-style: oblique;
+    text-align: center;
+    width: 100%;
+
+}
+
+.playRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    color:white;
+    text-align: center;
+    width: 100%;
+}
+
+.player1 {
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: oblique;
+    width: 30%;
+}
+
+.playCardArea {
+    color:red;
+    font-weight: bolder;
+    font-size: xx-large;
+    width:40%
+}
+
+.player2{
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: oblique;
+    width: 25%;
+}
+
+.p2 {
+    font-size: x-large;
+}
+
+.playAgain {
+    width: 100%;
+    justify-items: center;
 }
