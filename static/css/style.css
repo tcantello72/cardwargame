@@ -1,0 +1,79 @@
+/*
+created by: Toby Cantello
+Date created: 7/11/23
+Last updated: 7/12/23
+*/
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/background/americanflag.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    align-content: center;
+}
+
+footer {
+    background-color: lightgrey;
+    margin-top: auto;
+    color: black;
+    font-style: oblique;
+    width: 100%;
+}
+
+.footerParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.indexContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.indexTitle {
+    font-size: 72px;
+    font-style: oblique;
+    font-family: cursive;
+    color:red;
+}
+
+.indexTitle1 {
+    font-size: 144px;
+    font-style: oblique;
+    font-family: cursive;
+    color:white;
+}
+
+.indexTitle2 {
+    font-size: 72px;
+    font-style: oblique;
+    font-family: cursive;
+    color:blue;
+}
+
+.btn-index-mysettings {
+    width: 226.66px;
+    height: 75.2px;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+}

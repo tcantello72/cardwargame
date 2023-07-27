@@ -1,0 +1,24 @@
+<!--
+created by: Toby Cantello
+Yum! Brands employee ID tpc6775
+Date created: 7/13/23
+Last updated: 7/24/23
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Toby Cantello's Card War Game Play
+{% endblock %}
+
+{% block content %}
+    <h1>Deck Informtion</h1>
+        {{ deck }}
+    <br>
+    <h1>Card Information</h1>
+        {% for card in cards %}
+            <img src="{{ card['image'] }}">
+        {% endfor %}
+        <br>
+        cards remaining {{ card.remaining }}
+{% endblock %}   
