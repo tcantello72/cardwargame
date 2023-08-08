@@ -1,0 +1,22 @@
+Comments before Week 7 check-in
+==================================
+
+1. Overall
+- Make sure to push your most recent commits up to GitHub;  current versioni doesn't match what you were showing last week
+- Great start -- how are you organizing tasks for project? When remains on the to-do list, and how do you prioritize it? Would you ever need to use branching for features?
+
+2. Requirements
+- Runs locally
+- Front-end uses Bootstrap classes; displays components based on API data
+- Routes appear to work
+
+3. Testing
+- What is your testing plan?  Mainly manual?  Any chance for automated testing?
+
+4. Logic
+- Demoed features should have good logic (beyond what's in the current commit), but have to look at latest code more in-depth to comment
+
+5. Style
+- Create readme for how to test project, either deployed or locally.  Instructions for locally running it could include shell comments for installing and running flask, loading the right url (http://127.0.0.1:5000) etc
+- Good organization of files and variables
+- Additional additions for improved UI/UX/accessibility as previously discussed
