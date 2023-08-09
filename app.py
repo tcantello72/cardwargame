@@ -5,7 +5,7 @@ Last updated: 8/2/23
 """ 
 
 # Import required modules
-from flask import Flask, render_template, redirect, url_for, request, session
+from flask import Flask, render_template, request, session
 import requests
 import json
 
@@ -43,12 +43,15 @@ def play():
         p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
         p1_card_select = requests.get(p1_card_req)
         p1_card = json.loads(p1_card_select.content)
+        p1value = p1_card['cards'][0]['value']
 
         # Player 2 draws a card
         p2_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
         p2_card_select = requests.get(p2_card_req)
         p2_card = json.loads(p2_card_select.content)
-        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name)
+        p2value = p2_card['cards'][0]['value']
+
+        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name, p1value=p1value, p2value=p2value)
     else:
         # Gets the Deck Id that was created when "/" route was accessed
         deckId = session.get('deckId', None)
@@ -61,12 +64,15 @@ def play():
         p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
         p1_card_select = requests.get(p1_card_req)
         p1_card = json.loads(p1_card_select.content)
+        p1value = p1_card['cards'][0]['value']
 
         # Player 2 draws a card
         p2_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
         p2_card_select = requests.get(p2_card_req)
         p2_card = json.loads(p2_card_select.content)
-        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name)
+        p2value = p2_card['cards'][0]['value']
+
+        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name, p1value=p1value, p2value=p2value)
 
 @app.route("/creator", methods=["POST", "GET"])
 def creator():

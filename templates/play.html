@@ -41,6 +41,15 @@ Last updated: 8/9/23
                 {% endfor %}
             </div>
             Cards Remaining: {{ p2_card.remaining }}
+            <br>
+            {% if p1value > p2value %}
+                {{ p1Name }} won this battle!
+            {% elif p2value > p1value %}
+                {{ p2Name }} won this battle!
+            {% else %}
+                This battle is a tie!
+            {% endif %}
+            <br>
         </div>
         <div class="player2">
             <p>{{ p2Name }}'s stats area</p>

@@ -1,7 +1,7 @@
 /*
 created by: Toby Cantello
 Date created: 7/26/23
-Last updated: 8/2/23
+Last updated: 8/9/23
 */
 
 * { 
@@ -58,7 +58,7 @@ input {
     font-style: oblique;
     font-family: cursive;
     color:red;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .indexTitle1 {
@@ -74,7 +74,7 @@ input {
     font-style: oblique;
     font-family: cursive;
     color:blue;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em red;
 }
 
 .playerName {
@@ -82,6 +82,7 @@ input {
     font-style: oblique;
     font-weight: bolder;
     font-size: large;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .btn-index-mysettings {
@@ -128,6 +129,7 @@ input {
     font-size: xx-large;
     font-weight: bolder;
     font-style: oblique;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
     width: 25%;
 }
 
@@ -157,6 +159,7 @@ input {
     font-size: xx-large;
     font-weight: bolder;
     font-style: oblique;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
     width: 25%;
 }
 
@@ -210,6 +213,7 @@ input {
     font-style: oblique;
     font-weight: bolder;
     text-decoration: underline;
+    color: white;
     text-shadow: 1px 1px 2px crimson, 0 0 1em blue, 0 0 0.2em blue;
 }
 
@@ -237,6 +241,31 @@ input {
     text-decoration: underline;
     color: white;
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.howToPlay{
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.howStep{
+    text-align: left;
+}
+
+.howRules{
+    font-size: larger;
+    font-weight: bolder;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+.rules {
+    margin-left: 4em;
+    margin-right: 4em;
 }
 
 .e404Page{
@@ -281,6 +310,7 @@ input {
     font-style: oblique;
     font-weight: bolder;
     text-decoration: underline;
+    color: white;
     text-shadow: 1px 1px 2px crimson, 0 0 1em blue, 0 0 0.2em blue;
 }
 
@@ -294,26 +324,8 @@ input {
     width: 50%
 }
 
-.e404indexTitle {
-    font-size: 24px;
-    font-style: oblique;
-    font-family: cursive;
-    color:red;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}
-
-.e404indexTitle1 {
-    font-size: 48px;
-    font-style: oblique;
-    font-family: cursive;
-    color:white;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}
-
-.e404indexTitle2 {
-    font-size:24px;
-    font-style: oblique;
-    font-family: cursive;
+.e404link{
+    font-size: xx-large;
     color:blue;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em red;
 }
