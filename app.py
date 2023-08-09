@@ -28,7 +28,7 @@ def index():
 
 @app.route("/play", methods=["POST", "GET"])
 def play():
-    
+
     if request.method == "POST":
         # Gets the Deck Id that was created when "/" route was accessed
         deckId = session.get('deckId', None)
@@ -55,7 +55,7 @@ def play():
 
         # Getting Player Names
         p1Name = session.get('p1Name', None)
-        p2Name = session.get('p2Name', None)
+        p2Name = session.get('p2Name', None)       
     
         # Player 1 draws a card
         p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
@@ -75,6 +75,10 @@ def creator():
 @app.route("/howto", methods=["POST", "GET"])
 def howto():
     return render_template("howto.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html')
 
 #  Starts the server
 if __name__ == "__main__":

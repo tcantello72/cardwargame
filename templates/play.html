@@ -1,7 +1,7 @@
 <!--
 created by: Toby Cantello
 Date created: 7/13/23
-Last updated: 8/2/23
+Last updated: 8/9/23
 -->
 
 {% extends 'base.html' %}
@@ -11,36 +11,42 @@ Last updated: 8/2/23
 {% endblock %}
 
 {% block content %}
-    {% set p1wins = 0 %}
-    {% set p2wins = 0 %}
+<br>
+<br>
 <div class="playParent">
     <div class="playTitle">
         <p>Welcome to the Battle Field!</p>
     </div>
     <div class="playRow">
         <div class="player1">
-            <p>{{ p1Name }} stats area</p>
+            <p>{{ p1Name }}'s stats area</p>
             {% for p1_card in p1_cards %}
                 <p class="p2">Your card is a {{ p1_card['value'] }} of {{ p1_card['suit'] }}</p>
-                <p class="p2">Your wins are: {{p1wins}}</p>
+                <p class="p2">Your wins are: {{ p1wins }}</p>
             {% endfor %}
         </div>
         <div class="playCardArea">
-            {% for p1_card in p1_cards %}
-                <img src="{{ p1_card['image'] }}" alt="Player 1 card">
-            {% endfor %}
-            {% for p2_card in p2_cards %}
-                <img src="{{ p2_card['image'] }}" alt="Player 2 card">
-            {% endfor %}
-            <br>
+            <div class="playCards">
+                {% for p1_card in p1_cards %}
+                <figure>
+                    <figcaption>{{ p1Name }}'s Card</figcaption>
+                    <img src="{{ p1_card['image'] }}" alt="Player 1 card">
+                </figure>
+                {% endfor %}
+                {% for p2_card in p2_cards %}
+                <figure>
+                    <figcaption>{{ p2Name }}'s Card</figcaption>
+                    <img src="{{ p2_card['image'] }}" alt="Player 2 card">
+                </figure>
+                {% endfor %}
+            </div>
             Cards Remaining: {{ p2_card.remaining }}
-           
         </div>
         <div class="player2">
-            <p>{{ p2Name }} stats area</p>
+            <p>{{ p2Name }}'s stats area</p>
             {% for p2_card in p2_cards %}
                 <p class="p2">Your card is a {{ p2_card['value'] }} of {{ p2_card['suit'] }}</p>
-                <p class="p2">Your wins are: {{p2wins}}</p>
+                <p class="p2">Your wins are: {{ p2wins }}</p>
             {% endfor %}
         </div>
     </div>

@@ -22,6 +22,7 @@ body {
 
 main {
     align-content: center;
+    width: 100%;
 }
 
 footer {
@@ -127,15 +128,27 @@ input {
     font-size: xx-large;
     font-weight: bolder;
     font-style: oblique;
-    width: 30%;
+    width: 25%;
 }
 
 .playCardArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
     color:red;
     font-weight: bolder;
     font-size: xx-large;
-    width:40%;
+    width:50%;
     text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.playCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
 }
 
 .player2{
@@ -206,6 +219,7 @@ input {
     font-style: oblique;
     font-weight: bolder;
     text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
     width: 50%
 }
 
@@ -222,5 +236,84 @@ input {
     font-weight: bolder;
     text-decoration: underline;
     color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.e404Page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.e404Title {
+    font-size: 72px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.e404Main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    width: 75%
+}
+
+.e404Pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%
+}
+
+.e404Image {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.e404Name {
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px crimson, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.e404About {
+    color: white;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    width: 50%
+}
+
+.e404indexTitle {
+    font-size: 24px;
+    font-style: oblique;
+    font-family: cursive;
+    color:red;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.e404indexTitle1 {
+    font-size: 48px;
+    font-style: oblique;
+    font-family: cursive;
+    color:white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.e404indexTitle2 {
+    font-size:24px;
+    font-style: oblique;
+    font-family: cursive;
+    color:blue;
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
