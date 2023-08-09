@@ -1,11 +1,11 @@
 """
 created by: Toby Cantello
 Date created: 7/26/23
-Last updated: 7/27/23
+Last updated: 8/2/23
 """ 
 
 # Import required modules
-from flask import Flask, render_template, session
+from flask import Flask, render_template, redirect, url_for, request, session
 import requests
 import json
 
@@ -28,21 +28,54 @@ def index():
 
 @app.route("/play", methods=["POST", "GET"])
 def play():
+    
+    if request.method == "POST":
+        # Gets the Deck Id that was created when "/" route was accessed
+        deckId = session.get('deckId', None)
+    
+        # Getting Player Names
+        p1Name = request.form.get("p1name")
+        p2Name = request.form.get("p2name")
+        session['p1Name'] = p1Name
+        session['p2Name'] = p2Name
 
-    # Gets the Deck Id that was created when "/" route was accessed
-    deckId = session.get('deckId', None)
+        # Player 1 draws a card
+        p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
+        p1_card_select = requests.get(p1_card_req)
+        p1_card = json.loads(p1_card_select.content)
 
-    # Player 1 draws a card
-    p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
-    p1_card_select = requests.get(p1_card_req)
-    p1_card = json.loads(p1_card_select.content)
+        # Player 2 draws a card
+        p2_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
+        p2_card_select = requests.get(p2_card_req)
+        p2_card = json.loads(p2_card_select.content)
+        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name)
+    else:
+        # Gets the Deck Id that was created when "/" route was accessed
+        deckId = session.get('deckId', None)
 
-    # Player 2 draws a card
-    p2_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
-    p2_card_select = requests.get(p2_card_req)
-    p2_card = json.loads(p2_card_select.content)
-    return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'])
+        # Getting Player Names
+        p1Name = session.get('p1Name', None)
+        p2Name = session.get('p2Name', None)
+    
+        # Player 1 draws a card
+        p1_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
+        p1_card_select = requests.get(p1_card_req)
+        p1_card = json.loads(p1_card_select.content)
 
-# Starts the server
+        # Player 2 draws a card
+        p2_card_req = f'https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=1'
+        p2_card_select = requests.get(p2_card_req)
+        p2_card = json.loads(p2_card_select.content)
+        return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name)
+
+@app.route("/creator", methods=["POST", "GET"])
+def creator():
+    return render_template("creator.html")
+
+@app.route("/howto", methods=["POST", "GET"])
+def howto():
+    return render_template("howto.html")
+
+#  Starts the server
 if __name__ == "__main__":
     app.run(debug=True)

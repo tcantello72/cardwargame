@@ -1,7 +1,7 @@
 /*
 created by: Toby Cantello
-Date created: 7/11/23
-Last updated: 7/17/23
+Date created: 7/26/23
+Last updated: 8/2/23
 */
 
 * { 
@@ -32,6 +32,11 @@ footer {
     width: 100%;
 }
 
+input {
+    border: 1px, solid, black;
+    border-radius: 6px;
+}
+
 .footerParent {
     display: flex;
     flex-direction: row;
@@ -52,6 +57,7 @@ footer {
     font-style: oblique;
     font-family: cursive;
     color:red;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .indexTitle1 {
@@ -59,6 +65,7 @@ footer {
     font-style: oblique;
     font-family: cursive;
     color:white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .indexTitle2 {
@@ -66,6 +73,14 @@ footer {
     font-style: oblique;
     font-family: cursive;
     color:blue;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.playerName {
+    color: white;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .btn-index-mysettings {
@@ -76,6 +91,7 @@ footer {
     font-weight: bolder;
     text-align: center;
     align-content: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .playParent {
@@ -86,13 +102,13 @@ footer {
 }
 
 .playTitle {
-    color:white;
+    color:red;
     font-size: 72px;
     font-weight: bolder;
     font-style: oblique;
     text-align: center;
     width: 100%;
-
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .playRow {
@@ -118,7 +134,8 @@ footer {
     color:red;
     font-weight: bolder;
     font-size: xx-large;
-    width:40%
+    width:40%;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .player2{
@@ -137,4 +154,73 @@ footer {
 .playAgain {
     width: 100%;
     justify-items: center;
+}
+
+.creatorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.creatorBio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    width: 75%
+}
+
+.creatorNamePic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%
+}
+
+.creatorTitle {
+    font-size: 72px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.creatorImage {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.creatorName {
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px crimson, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.creatorAbout {
+    color: white;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: center;
+    width: 50%
+}
+
+.howToPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.howToTitle {
+    font-size: 72px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
