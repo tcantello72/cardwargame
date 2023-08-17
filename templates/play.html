@@ -1,7 +1,7 @@
 <!--
 created by: Toby Cantello
 Date created: 7/13/23
-Last updated: 8/9/23
+Last updated: 8/17/23
 -->
 
 {% extends 'base.html' %}
@@ -22,8 +22,25 @@ Last updated: 8/9/23
             <p>{{ p1Name }}'s stats area</p>
             {% for p1_card in p1_cards %}
                 <p class="p2">Your card is a {{ p1_card['value'] }} of {{ p1_card['suit'] }}</p>
-                <p class="p2">Your wins are: {{ p1wins }}</p>
             {% endfor %}
+            <br>
+            <p class="p2">{{ p1Name }}'s Stats are:</p>
+            <table class="recordTable">
+                <thead>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Ties</th>
+                    </tr>
+                </thead>
+                <tboby>
+                    <tr>
+                        <td>{{ player1wins }}</td>
+                        <td>{{ player1losses }}</td>
+                        <td>{{ player1ties }}</td>
+                    </tr>
+                </tboby>
+            </table>
         </div>
         <div class="playCardArea">
             <div class="playCards">
@@ -42,9 +59,9 @@ Last updated: 8/9/23
             </div>
             Cards Remaining: {{ p2_card.remaining }}
             <br>
-            {% if p1value > p2value %}
+            {% if p1valuescore > p2valuescore %}
                 {{ p1Name }} won this battle!
-            {% elif p2value > p1value %}
+            {% elif p2valuescore > p1valuescore %}
                 {{ p2Name }} won this battle!
             {% else %}
                 This battle is a tie!
@@ -55,20 +72,33 @@ Last updated: 8/9/23
             <p>{{ p2Name }}'s stats area</p>
             {% for p2_card in p2_cards %}
                 <p class="p2">Your card is a {{ p2_card['value'] }} of {{ p2_card['suit'] }}</p>
-                <p class="p2">Your wins are: {{ p2wins }}</p>
             {% endfor %}
+            <br>
+            <p class="p2">{{ p2Name }}'s Stats are:</p>
+            <table class="recordTable">
+                <thead>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Ties</th>
+                    </tr>
+                </thead>
+                <tboby>
+                    <tr>
+                        <td>{{ player2wins }}</td>
+                        <td>{{ player2losses }}</td>
+                        <td>{{ player2ties }}</td>
+                    </tr>
+                </tboby>
+            </table>
         </div>
     </div>
-    <br>
-    <br>
-    <center>
-        <div class="playAgain">
-            {% if p2_card.remaining > 0: %}
-                <a href="/play" class="btn btn-success btn-index-mysettings">Next Battle!</a>
+    <div class="playAgain">
+        {% if p2_card.remaining > 0: %}
+            <a href="/play" class="btn btn-success btn-index-mysettings" value="">Next Battle!</a>
             {% else %}
-                <a href="/" class="btn btn-success btn-index-mysettings">Play Again!</a>
-            {% endif %}
-        </div>
-    </center>
+            <a href="/" class="btn btn-success btn-index-mysettings">Play Again!</a>
+        {% endif %}
+    </div>
 </div> 
 {% endblock %}   

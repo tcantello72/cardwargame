@@ -1,0 +1,65 @@
+<!--
+created by: Toby Cantello
+Date created: 8/17/23
+Last updated: 8/17/23
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Comments
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="commentsPage">
+    <div>
+        <h1 class="commentsTitle">Leave a Comment</h1>
+    </div>
+    <div>
+        <form action="/comments" method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label class="commentsName">Please enter your name:</label></td>
+                        <td><input type="text" name="name" id="name" aria-label="Name" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label class="commentsName">Please enter email:</label></td>
+                        <td><input type="email" name="email" id="email" aria-label="Email" placeholder="email"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top"><label class="commentsName">Please enter your comment:</label></td>
+                        <td><textarea name="userComment" id="userComment" placeholder="Your comment" rows="5" cols="30" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="commentsInputButtonCell"><input class="btn btn-success btn-index-mysettings1" type="submit" value="Submit Comment"></td>
+                    </tr>
+                </tbody>
+            </table>   
+        </form>
+    </div>
+    <br>
+    <div class="comments">
+        <p class="commentNumbers">Number of comments: {{ comments | length }}</p>
+        <table class="commentsTable">
+            <thead>
+                <tr class="commentsTableRow">
+                    <th class="commentTableNameCell commentsTableCell ">Name</th>
+                    <th class="commentTableCommentCell commentsTableCell">Comment</th>
+                </tr>
+            </thead>
+            {% for comment in comments%}
+            <tbody>
+                <tr class="commentsTableRow">
+                    <td class="commentTableNameCell commentsTableCell">{{ comment.name }}</td>
+                    <td class="commentTableCommentCell commentsTableCell">{{ comment.userComment }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}   
+        </table>
+    </div>
+    </div>
+</div>
+{% endblock %}
