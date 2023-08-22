@@ -1,16 +1,19 @@
 """
 created by: Toby Cantello
 Date created: 7/26/23
-Last updated: 8/17/23
+Last updated: 8/22/23
 """ 
 
 # Import required modules
 from flask import Flask, render_template, request, redirect, session
 import requests
 import json
-import sqlite3
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import text
+
+# Import Blueprints to the other .py files (different routes)
+from howto import howto_blueprint
+from creator import creator_blueprint
+from error import error_blueprint
 
 # Create a flask application, connect to database, enter secert key, Intitial flask-sqlalchemy extension
 app = Flask(__name__)
@@ -18,6 +21,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cardgame.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["SECRET_KEY"] = 'YumRocks2023!'
 db = SQLAlchemy()
+
+# Registering the Blueprints
+app.register_blueprint(howto_blueprint, url_prefix="")
+app.register_blueprint(creator_blueprint, url_prefix="")
+app.register_blueprint(error_blueprint)
 
 # Global score variables
 globalPlayer1Wins = 0
@@ -156,14 +164,6 @@ def play():
         return render_template("play.html", p1_card=p1_card, p1_cards=p1_card['cards'], p2_card=p2_card, p2_cards=p2_card['cards'], p1Name=p1Name, p2Name=p2Name, p1value=p1value, p2value=p2value, p1valuescore=p1valuescore, p2valuescore=p2valuescore,
             player1wins=globalPlayer1Wins, player1losses=globalPlayer1Losses, player1ties=globalPlayer1Ties, player2wins=globalPlayer2Wins, player2losses=globalPlayer2Losses, player2ties=globalPlayer2Ties)
 
-@app.route("/howto", methods=["POST", "GET"])
-def howto():
-    return render_template("howto.html")
-
-@app.route("/creator", methods=["POST", "GET"])
-def creator():
-    return render_template("creator.html")
-
 @app.route("/comments", methods=["POST", "GET"])
 def comments():
     if request.method =='POST':
@@ -182,10 +182,6 @@ def comments():
     else:
         comments = Comments.query.order_by(Comments.id).all()
         return render_template('comments.html', comments=comments)
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html')
 
 #  Starts the server
 if __name__ == "__main__":

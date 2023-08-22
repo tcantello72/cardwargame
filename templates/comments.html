@@ -1,10 +1,14 @@
 <!--
 created by: Toby Cantello
 Date created: 8/17/23
-Last updated: 8/17/23
+Last updated: 8/21/23
 -->
 
 {% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
+{% endblock %}
 
 {% block title %}
     Comments
@@ -46,8 +50,8 @@ Last updated: 8/17/23
         <table class="commentsTable">
             <thead>
                 <tr class="commentsTableRow">
-                    <th class="commentTableNameCell commentsTableCell ">Name</th>
-                    <th class="commentTableCommentCell commentsTableCell">Comment</th>
+                    <th class="commentTableNameCell commentsTableCell" style="font-size: x-large">Name</th>
+                    <th class="commentTableCommentCell commentsTableCell" style="font-size: x-large">Comment</th>
                 </tr>
             </thead>
             {% for comment in comments%}

@@ -1,10 +1,14 @@
 <!--
 created by: Toby Cantello
 Date created: 8/2/23
-Last updated: 8/16/23
+Last updated: 8/21/23
 -->
 
 {% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/creator.css') }}">
+{% endblock %}
 
 {% block title %}
     About the Creator of the Site

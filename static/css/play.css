@@ -1,0 +1,92 @@
+/*
+created by: Toby Cantello
+Date created: 8/22/23
+Last updated: 8/22/23
+*/
+
+.playParent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.playTitle {
+    color:red;
+    font-size: 72px;
+    font-weight: bolder;
+    font-style: oblique;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.playRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    color:white;
+    text-align: center;
+    width: 100%;
+}
+
+.player1 {
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    width: 26%;
+}
+
+.playCardArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    color:red;
+    font-weight: bolder;
+    font-size: xx-large;
+    width:48%;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.playCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+.player2{
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    width: 26%;
+}
+
+.p2 {
+    font-size: x-large;
+}
+
+.playAgain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.recordTable{
+    width: 90%;
+    justify-self: center;
+}

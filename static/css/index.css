@@ -1,0 +1,75 @@
+/*
+created by: Toby Cantello
+Date created: 8/22/23
+Last updated: 8/22/23
+*/
+
+.indexContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.indexTitle {
+    font-size: 64px;
+    font-style: oblique;
+    font-family: cursive;
+    color:red;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.indexTitle1 {
+    font-size: 96px;
+    font-style: oblique;
+    font-family: cursive;
+    color:white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.indexTitle2 {
+    font-size: 64px;
+    font-style: oblique;
+    font-family: cursive;
+    color:blue;
+    text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em red;
+}
+
+.indexWarning {
+    font-size: 16px;
+    font-style: oblique;
+    font-family: cursive;
+    color:white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.playerName {
+    color: white;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: large;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.btn-index-mysettings {
+    width: 226.66px;
+    height: 75.2px;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.btn-index-mysettings1 {
+    width: 200px;
+    height: 50px;
+    font-style: oblique;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}

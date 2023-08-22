@@ -1,10 +1,14 @@
 <!--
 created by: Toby Cantello
 Date created: 7/13/23
-Last updated: 8/17/23
+Last updated: 8/23/23
 -->
 
 {% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/play.css') }}">
+{% endblock %}
 
 {% block title %}
     Toby Cantello's Card War Game Play
