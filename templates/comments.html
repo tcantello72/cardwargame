@@ -21,24 +21,29 @@ Last updated: 8/21/23
     <div>
         <h1 class="commentsTitle">Leave a Comment</h1>
     </div>
-    <div>
+    <br>
+    <br>
+    <div class="commentsInput">
         <form action="/comments" method="POST">
-            <table>
+            <table class="inputTable">
                 <tbody>
                     <tr>
-                        <td><label class="commentsName">Please enter your name:</label></td>
-                        <td><input type="text" name="name" id="name" aria-label="Name" placeholder="name" required></td>
+                        <td class="leftColumn"><label class="commentsName">Please enter your name:</label></td>
+                        <td class="middleColumn"></td>
+                        <td class="rightColumn"><input class="commentsNameBox" type="text" name="name" id="name" aria-label="Name" placeholder="name" required></td>
                     </tr>
                     <tr>
-                        <td><label class="commentsName">Please enter email:</label></td>
-                        <td><input type="email" name="email" id="email" aria-label="Email" placeholder="email"></td>
+                        <td class="leftColumn"><label class="commentsName">Please enter email:</label></td>
+                        <td class="middleColumn"></td>
+                        <td class="rightColumn"><input class="commentsNameBox" type="email" name="email" id="email" aria-label="Email" placeholder="email"></td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:top"><label class="commentsName">Please enter your comment:</label></td>
-                        <td><textarea name="userComment" id="userComment" placeholder="Your comment" rows="5" cols="30" required></textarea></td>
+                        <td class="leftColumn" style="vertical-align:top"><label class="commentsName">Please enter your comment:</label></td>
+                        <td class="middleColumn"></td>
+                        <td class="rightColumn"><textarea class="commentsNameBox" name="userComment" id="userComment" placeholder="Your comment" rows="5" cols="30" required></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="commentsInputButtonCell"><input class="btn btn-success btn-index-mysettings1" type="submit" value="Submit Comment"></td>
+                        <td colspan="3" class="commentsInputButtonCell"><input class="btn btn-success btn-index-mysettings1" type="submit" value="Submit Comment"></td>
                     </tr>
                 </tbody>
             </table>   
